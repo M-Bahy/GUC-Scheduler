@@ -79,6 +79,7 @@ def add_both(schedules, elective_code, tuts1, tuts2):
                         new_schedule = copy.deepcopy(schedule)
                         tutorial_name = new_schedule.name
                         new_schedule.name = f"{tutorial_name} Core and Tutorial {tutorial1} in {ELECTIVES[elective_code[0]]} and Tutorial {tutorial2} in {ELECTIVES[elective_code[1]]}"
+                        new_schedule.free()
                         results.append(new_schedule)
     return results
 
