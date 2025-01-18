@@ -43,7 +43,30 @@ def add_elective_lecture(schedules, elective_code):
 
 
 def add_both(schedules, elective_code, tuts1, tuts2):
-    pass
+    results = []
+    for tutorial1 in tuts1:  # [T005, T006, T007]
+        working = schedules.copy()
+        for subject in subjects:
+            if subject.code == elective_code[0] and subject.group == tutorial1:
+                day = DAY_MAPPING[subject.day]
+                slot = SLOT_MAPPING[subject.slot]
+                for schedule in working:
+                    # T005 Tutorial DLCV
+                    schedule.set_slot(day, slot, subject.name + " Tutorial")
+                    break
+        for tutorial2 in tuts2:
+            working_copy = working.copy()
+            for subject in subjects:
+                if subject.code == elective_code[1] and subject.group == tutorial2:
+                    day = DAY_MAPPING[subject.day]
+                    slot = SLOT_MAPPING[subject.slot]
+                    for schedule in working_copy:
+                        try:
+                            schedule.set_slot(day, slot, subject.name + " Tutorial")
+                        except ValueError:
+                            continue
+                        results.append(schedule)
+    return results
 
 
 def add_one(schedules, elective_code, tuts):
