@@ -23,7 +23,7 @@ for number in GS:
     schedule = Schedule(strict=True, name=f"Tutorial {number}")
     lec_group = "L001" if number < 16 else "L002"
     for subject in subjects:
-        if "Seminar" in subject.name or not (subject.isCore):
+        if not (subject.isCore):
             continue
         if subject.type == LECTURE and subject.group == lec_group:
             day = DAY_MAPPING[subject.day]
