@@ -1,3 +1,4 @@
+import pickle
 import pandas as pd
 from subject import Subject
 from schedule import Schedule
@@ -50,6 +51,18 @@ CORES = {
 }
 
 MAPPING = {**ELECTIVES, **SEMINARS, **CORES}
+
+
+def serialize(obj, name):
+    name = name + ".pickle"
+    with open(name, "wb") as outfile:
+        pickle.dump(obj, outfile)
+
+
+def deserialize(name):
+    name = name + ".pickle"
+    with open(name, "rb") as infile:
+        return pickle.load(infile)
 
 
 def encode(CSV_PATH):
@@ -114,4 +127,7 @@ subjects_of_group_1, schedule_of_group_1 = encode(G1_PATH)
 subjects_of_group_2, schedule_of_group_2 = encode(G2_PATH)
 schedule_of_group_1.save("schedule1.csv")
 schedule_of_group_2.save("schedule2.csv")
-print(subjects_of_group_1[0].group)
+all_subjects = subjects_of_group_1 + subjects_of_group_2
+serialize(all_subjects, "all_subjects")
+serialize(schedule_of_group_1, "schedule1")
+serialize(schedule_of_group_2, "schedule2")
