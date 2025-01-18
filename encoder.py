@@ -2,55 +2,14 @@ import pickle
 import pandas as pd
 from subject import Subject
 from schedule import Schedule
-
-G1_PATH = "g1 og.csv"
-G2_PATH = "g2 og.csv"
-# OUTPUT_PATH = "output2.csv"
-BETWEEN_CELLS_SPLIT = "      "
-INNER_CELL_SPLIT = " "
-LECTURE = "Lecture"
-LAB = "Lab"
-TUTORIAL = "Tut"
-ELECTIVES = {
-    "CSEN907": "KRR",
-    "CSEN1076": "NLP",
-    "DMET1067": "Deep Learning",
-    "ELCT1018": "Quantum",
-    "NETW1009": "Cloud Computing",
-    "DMET1072": "Computer Animation",
-    "DMET1001": "Image Processing",
-    "DMET1042": "VOIP",
-    "DMET1075": "AR/VR",
-    "MCTR1024": "Reinforcement Learning",
-}
-SEMINARS = {
-    "CSEN1034": "Seminar - Haythem Ismail",
-    "CSEN1118": "Seminar - Mervat Abuelkheir",
-    "CSEN1088": "Seminar - Milad Ghantous",
-    "CSEN1143": "Seminar - Yomna Hassan",
-    "DMET1057": "Seminar - Hisham Othman",
-    "DMET1076": "Seminar - Rimon Elias",
-    "DMET1061": "Seminar - Mohammed Salem",
-    "DMET1077": "Seminar - Mohammed Salem",
-    "CSEN1127": "Seminar - Shereen Moataz",
-    "CSEN1142": "Seminar - Shereen Moataz",
-    "CSEN1008": "Seminar - Catherine Elias",
-    "CSEN1139": "Seminar - Aya Salama",
-    "CSEN1140": "Seminar - Aya Salama",
-    "CSEN1126": "Seminar - Ahmed Abdelfattah",
-    "CSEN1128": "Seminar - Mohamed Hamed",
-    "CSEN1141": "Seminar - Mohamed Karam Gabr",
-    "CSEN1134": "Seminar - Mohamed Karam Gabr",
-    "CSEN1135": "Seminar - Mohamed Karam Gabr",
-}
-CORES = {
-    "CSEN1001": "Security",
-    "CSEN1003": "Compilers",
-    "CSEN1002": "Scalable",
-    "HUMA1001": "ITPM",
-}
-
-MAPPING = {**ELECTIVES, **SEMINARS, **CORES}
+from data import (
+    BETWEEN_CELLS_SPLIT,
+    INNER_CELL_SPLIT,
+    MAPPING,
+    CORES,
+    G1_PATH,
+    G2_PATH,
+)
 
 
 def serialize(obj, name):
