@@ -23,6 +23,26 @@ ELECTIVES = {
     "DMET1075": "AR/VR",
     "MCTR1024": "Reinforcement Learning",
 }
+SEMINARS = {
+    "CSEN1034": "Seminar - Haythem Ismail",
+    "CSEN1118": "Seminar - Mervat Abuelkheir",
+    "CSEN1088": "Seminar - Milad Ghantous",
+    "CSEN1143": "Seminar - Yomna Hassan",
+    "DMET1057": "Seminar - Hisham Othman",
+    "DMET1076": "Seminar - Rimon Elias",
+    "DMET1061": "Seminar - Mohammed Salem",
+    "DMET1077": "Seminar - Mohammed Salem",
+    "CSEN1127": "Seminar - Shereen Moataz",
+    "CSEN1142": "Seminar - Shereen Moataz",
+    "CSEN1008": "Seminar - Catherine Elias",
+    "CSEN1139": "Seminar - Aya Salama",
+    "CSEN1140": "Seminar - Aya Salama",
+    "CSEN1126": "Seminar - Ahmed Abdelfattah",
+    "CSEN1128": "Seminar - Mohamed Hamed",
+    "CSEN1141": "Seminar - Mohamed Karam Gabr",
+    "CSEN1134": "Seminar - Mohamed Karam Gabr",
+    "CSEN1135": "Seminar - Mohamed Karam Gabr",
+}
 
 
 def encode(CSV_PATH):
