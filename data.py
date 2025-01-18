@@ -121,11 +121,11 @@ LABS = [
 ]
 
 ELECTIVE_TUTS = {
-    "CSEN907": [],
-    "CSEN1076": ["T001", "T002"],
-    "DMET1067": ["T001", "T002"],
-    "ELCT1018": ["P001", "P002"],
-    "NETW1009": [
+    "CSEN907": [],  # KRR
+    "CSEN1076": ["T001", "T002"],  # NLP
+    "DMET1067": ["T001", "T002"],  # Deep Learning
+    "ELCT1018": ["P001", "P002"],  # Quantum
+    "NETW1009": [  # Cloud Computing
         "T001",
         "T002",
         "T003",
@@ -143,8 +143,8 @@ ELECTIVE_TUTS = {
         "T015",
         "T016",
     ],
-    "DMET1072": [],
-    "DMET1001": [
+    "DMET1072": [],  # Computer Animation
+    "DMET1001": [  # Image Processing
         "T001",
         "T002",
         "T003",
@@ -160,9 +160,9 @@ ELECTIVE_TUTS = {
         "T013",
         "T014",
     ],
-    "DMET1042": [],
-    "DMET1075": [],
-    "MCTR1024": ["T003"],
+    "DMET1042": [],  # VOIP
+    "DMET1075": [],  # AR/VR
+    "MCTR1024": ["T003"],  # Reinforcement Learning
 }
 
 
