@@ -30,7 +30,7 @@ def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
                     continue
 
                 if subject[5] == LECTURE:
-                    subject = subject[2:]
+                    subject = subject[1:]
                 else:
                     subject = subject[1:]
                 code = subject[-3] + subject[-2]
