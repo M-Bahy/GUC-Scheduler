@@ -1,6 +1,5 @@
 from data import deserialize
-from data import DAY_MAPPING, SLOT_MAPPING, ELECTIVE_TUTS
-from itertools import product
+from data import DAY_MAPPING, SLOT_MAPPING, LECTURE
 
 # from schedule import Schedule
 
@@ -21,57 +20,36 @@ def add_seminar(cores, seminar_code):
     return cores
 
 
-def add_elective(seminars, elective_codes):
-    first_elective = None
-    second_elective = None
+def add_elective_lecture(schedules, elective_code):
+    lecs = []
+    results = []
     for subject in subjects:
-        if subject.code == elective_codes[0]:
-            first_elective = subject
-        elif subject.code == elective_codes[1]:
-            second_elective = subject
-        if first_elective and second_elective:
-            break
+        if subject.code == elective_code and subject.type == LECTURE:
+            lecs.append(subject)
 
-    elect_1_tuts = ELECTIVE_TUTS.get(elective_codes[0], [])
-    elect_2_tuts = ELECTIVE_TUTS.get(elective_codes[1], [])
+    counter = 4
 
-    def get_subject_by_tut(tut_code):
-        for subject in subjects:
-            if subject.code == tut_code:
-                return subject
-        return None
-
-    elect_1_subjects = [get_subject_by_tut(tut) for tut in elect_1_tuts]
-    elect_2_subjects = [get_subject_by_tut(tut) for tut in elect_2_tuts]
-
-    possible_combinations = list(product(elect_1_subjects, elect_2_subjects))
-
-    valid_combinations = []
-
-    for combo in possible_combinations:
-        if combo[0] is None or combo[1] is None:
-            continue
-        try:
-            for seminar in seminars:
-                seminar_copy = seminar.copy()
-                seminar_copy.set_slot(
-                    DAY_MAPPING[combo[0].day],
-                    SLOT_MAPPING[combo[0].slot],
-                    combo[0].name,
-                )
-                seminar_copy.set_slot(
-                    DAY_MAPPING[combo[1].day],
-                    SLOT_MAPPING[combo[1].slot],
-                    combo[1].name,
-                )
-            valid_combinations.append(combo)
-        except ValueError:
-            continue
-
-    print(valid_combinations)
-    return seminars
+    for schedule in schedules:
+        counter += 1
+        group_code = "L001" if counter < 16 else "L002"
+        for lec in lecs:
+            if lec.group == group_code:
+                day = DAY_MAPPING[lec.day]
+                slot = SLOT_MAPPING[lec.slot]
+                schedule.set_slot(day, slot, lec.name + " Lecture")
+        results.append(schedule)
+    # print(results)
+    return results
 
 
+def add_elective(seminars, elective_codes):
+    with_lecs = add_elective_lecture(seminars, elective_codes[0])
+    with_lecs = add_elective_lecture(with_lecs, elective_codes[1])
+    return with_lecs
+
+
+# print(core_schedules)
 to_func = core_schedules.copy()
 seminars = add_seminar(to_func, "CSEN1140")
-final_schedules = add_elective(seminars, ["CSEN907", "CSEN1076"])
+final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
+print(final_schedules)
