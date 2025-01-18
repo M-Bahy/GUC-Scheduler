@@ -173,4 +173,5 @@ cython_debug/
 .vscode/
 
 try.xlsm
-OnlyFahim/*
+
+OnlyFahim*

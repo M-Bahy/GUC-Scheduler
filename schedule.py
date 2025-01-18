@@ -1,3 +1,4 @@
+from fpdf import FPDF
 import pandas as pd
 
 
@@ -59,3 +60,31 @@ class Schedule:
                 # If no subjects were added, mark as "free"
                 if pd.isnull(self.df.iloc[i, j]):
                     self.df.iloc[i, j] = "free"
+
+    def save_as_pdf(self, path):
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=8)
+
+        # Add the schedule name
+        pdf.cell(200, 10, txt=self.name, ln=True, align="C")
+
+        # Add the table header
+        pdf.cell(30, 10, txt="", border=1)
+        for column in self.columns:
+            pdf.cell(30, 10, txt=column, border=1)
+        pdf.ln()
+
+        # Add the table rows
+        for index, row in self.df.iterrows():
+            pdf.cell(30, 10, txt=index, border=1)
+            for item in row:
+                pdf.cell(30, 10, txt=str(item), border=1)
+            pdf.ln()
+
+        pdf.output(path)
+
+
+# Example usage:
+# schedule = Schedule(strict=True, name="Sample Schedule")
+# schedule.save_as_pdf("sample_schedule.pdf")

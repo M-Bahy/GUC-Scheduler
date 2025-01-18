@@ -101,7 +101,7 @@ print(len(seminars))
 print(len(seminars))
 # print(final_schedules)
 
-person = "OnlyFahim"
+person = "OnlyFahim2"
 
 # create a folder for the person
 os.makedirs(person, exist_ok=True)
@@ -110,6 +110,6 @@ os.makedirs(person, exist_ok=True)
 
 for i, schedule in enumerate(seminars):
     schedule.free()
-    saving_name = f"{person}/Tutorial {schedule.number}.csv"
-    schedule.save(saving_name)
+    saving_name = f"{person}/Tutorial {schedule.number}.pdf"
+    schedule.save_as_pdf(saving_name)
     # serialize(schedule, f"{person}/schedule{i}")
