@@ -2,24 +2,15 @@ import pandas as pd
 
 # CSV_PATH = "g1 og.csv"
 # OUTPUT_PATH = "output2.csv"
-# BETWEEN_CELLS_SPLIT = "      "
-# INNER_CELL_SPLIT = " "
-# LECTURE = "Lecture"
-# LAB = "Lab"
-# TUTORIAL = "Tut"
+BETWEEN_CELLS_SPLIT = "      "
+INNER_CELL_SPLIT = " "
+LECTURE = "Lecture"
+LAB = "Lab"
+TUTORIAL = "Tut"
 # MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
 
 
-def generate(
-    CSV_PATH,
-    OUTPUT_PATH,
-    MAPPING,
-    BETWEEN_CELLS_SPLIT,
-    INNER_CELL_SPLIT,
-    LECTURE,
-    LAB,
-    TUTORIAL,
-):
+def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
     df = pd.read_csv(CSV_PATH, index_col=0)
     output_df = pd.DataFrame(index=df.index, columns=df.columns)
 
@@ -68,9 +59,4 @@ generate(
     "g1 og.csv",
     "output2.csv",
     {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"},
-    "      ",
-    " ",
-    "Lecture",
-    "Lab",
-    "Tut",
 )
