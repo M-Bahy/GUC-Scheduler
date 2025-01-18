@@ -4,7 +4,7 @@ from data import DAY_MAPPING, SLOT_MAPPING, LECTURE, ELECTIVE_TUTS
 
 # from schedule import Schedule
 
-core_schedules = deserialize("core_schedules")
+core_schedules = deserialize("core_schedules_with_tuts")
 subjects = deserialize("all_subjects")
 
 
@@ -37,8 +37,11 @@ def add_elective_lecture(schedules, elective_code):
             if lec.group == group_code:
                 day = DAY_MAPPING[lec.day]
                 slot = SLOT_MAPPING[lec.slot]
-                schedule.set_slot(day, slot, lec.name + " Lecture")
-        results.append(schedule)
+                try :
+                    schedule.set_slot(day, slot, lec.name + " Lecture")
+                    results.append(schedule)
+                except ValueError:
+                    continue
     # print(results)
     return results
 
