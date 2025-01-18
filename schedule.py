@@ -2,7 +2,7 @@ import pandas as pd
 
 
 class Schedule:
-    def __init__(self):
+    def __init__(self, strict=False):
         self.columns = [
             "First Slot 8:15-9:45",
             "Second Slot 10:00-11:30",
@@ -19,6 +19,7 @@ class Schedule:
             "Thursday",
         ]
         self.df = pd.DataFrame(index=self.index, columns=self.columns)
+        self.strict = strict
 
     def __str__(self):
         return str(self.df)
@@ -33,6 +34,13 @@ class Schedule:
         return self.df.iloc[day, slot]
 
     def set_slot(self, day, slot, value):
+        if self.strict and pd.notnull(self.df.iloc[day, slot]):
+            message = (
+                f"Slot {day} {slot} is already occupied"
+                + f" with {self.df.iloc[day, slot]}"
+                + f" and you are trying to set it to {value}"
+            )
+            raise ValueError(message)
         self.df.iloc[day, slot] = value
 
     def save(self, path):
