@@ -102,6 +102,9 @@ def encode(CSV_PATH):
                 output_df.iloc[i, j] = "free"
             else:
                 # Join subjects with a line break
+                if schedule.strict and len(new_content) > 1:
+                    schedule.set_slot(i, j, new_content[0])
+                    schedule.set_slot(i, j, new_content[1])  # raise ValueError
                 schedule.set_slot(i, j, "\n".join(new_content))
     schedule.free()
     return subjects, schedule

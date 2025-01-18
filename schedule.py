@@ -34,7 +34,7 @@ class Schedule:
         return self.df.iloc[day, slot]
 
     def set_slot(self, day, slot, value):
-        if self.strict and pd.notnull(self.df.iloc[day, slot]):
+        if self.strict and not (pd.isna(self.df.iloc[day, slot])):
             message = (
                 f"Slot {day} {slot} is already occupied"
                 + f" with {self.df.iloc[day, slot]}"
