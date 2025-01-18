@@ -1,19 +1,23 @@
 import pandas as pd
+from subject import Subject
+from schedule import Schedule
 
-# CSV_PATH = "g1 og.csv"
+G1_PATH = "g1 og.csv"
+G2_PATH = "g2 og.csv"
 # OUTPUT_PATH = "output2.csv"
 BETWEEN_CELLS_SPLIT = "      "
 INNER_CELL_SPLIT = " "
 LECTURE = "Lecture"
 LAB = "Lab"
 TUTORIAL = "Tut"
-# MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
+MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
 
 
-def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
+def encode(CSV_PATH):
     df = pd.read_csv(CSV_PATH, index_col=0)
     output_df = pd.DataFrame(index=df.index, columns=df.columns)
-
+    subjects = []
+    schedule = Schedule()
     for i in range(0, len(df.index)):  # loop through rows
         for j in range(0, len(df.columns)):  # loop through columns
             content = df.iloc[i, j].split(BETWEEN_CELLS_SPLIT)
@@ -29,10 +33,7 @@ def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
                 if len(subject) == 1:
                     continue
 
-                if subject[5] == LECTURE:
-                    subject = subject[1:]
-                else:
-                    subject = subject[1:]
+                subject = subject[1:]
                 code = subject[-3] + subject[-2]
 
                 # replace the code with its mapping if it exists
@@ -41,6 +42,15 @@ def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
                     # put the code back in the subject
                     subject[-3] = code
                     subject.pop(-2)
+                    sub = Subject(  # group, location, name, type, day, slot
+                        subject[0],
+                        subject[1],
+                        subject[2],
+                        subject[3],
+                        df.index[i],
+                        df.columns[j],
+                    )
+                    subjects.append(sub)
                     subject = " ".join(subject)
                     new_content.append(subject)
 
@@ -49,14 +59,14 @@ def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
                 output_df.iloc[i, j] = "free"
             else:
                 # Join subjects with a line break
-                output_df.iloc[i, j] = "\n".join(new_content)
+                schedule.set_slot(i, j, "\n".join(new_content))
+    schedule.free()
+    return subjects, schedule
 
-    # Save the output DataFrame to a CSV file
-    output_df.to_csv(OUTPUT_PATH)
 
+subjects_of_group_1, schedule_of_group_1 = encode(G1_PATH)
+subjects_of_group_2, schedule_of_group_2 = encode(G2_PATH)
+schedule_of_group_1.save("schedule1.csv")
+schedule_of_group_2.save("schedule2.csv")
+print(subjects_of_group_1[0].group)
 
-generate(
-    "g1 og.csv",
-    "output4.csv",
-    {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"},
-)

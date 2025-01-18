@@ -1,5 +1,4 @@
 import pandas as pd
-from subject import Subject
 
 
 class Schedule:
@@ -24,6 +23,9 @@ class Schedule:
     def __str__(self):
         return str(self.df)
 
+    def __repr__(self):
+        return str(self.df)
+
     def get_size(self):
         return self.df.shape
 
@@ -36,10 +38,9 @@ class Schedule:
     def save(self, path):
         self.df.to_csv(path)
 
-
-# s = Schedule()
-# print(s.get_size())  # (6, 5)
-# sub = Subject("G1", "C7.404", "Math", "Lecture", "Saturday", "First Slot 8:15-9:45")
-# s.set_slot(0, 0, sub)
-# print(s.get_slot(0, 0))  # Math
-# print(True if pd.isna(s.get_slot(0, 1)) else False)  # True
+    def free(self):
+        for i in range(0, len(self.df.index)):
+            for j in range(0, len(self.df.columns)):
+                # If no subjects were added, mark as "free"
+                if pd.isnull(self.df.iloc[i, j]):
+                    self.df.iloc[i, j] = "free"
