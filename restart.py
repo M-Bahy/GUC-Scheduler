@@ -93,11 +93,10 @@ to_func = core_schedules.copy()
 seminars = add_seminar(to_func, "CSEN1140")
 print(len(seminars))
 # print(seminars[0])
-final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
-print(len(final_schedules))
+# final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
+print(len(seminars))
 # print(final_schedules)
 
 person = "OnlyFahim"
 
-elective_1 = ELECTIVES["NETW1009"]
-elective_2 = ELECTIVES["DMET1001"]
+
