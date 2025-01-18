@@ -56,7 +56,7 @@ def generate(CSV_PATH, OUTPUT_PATH, MAPPING):
 
 
 generate(
-    "g1 og.csv",
+    "g2 og.csv",
     "output2.csv",
     {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"},
 )
