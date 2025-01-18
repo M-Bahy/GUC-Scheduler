@@ -5,6 +5,7 @@ from data import DAY_MAPPING, SLOT_MAPPING, LECTURE, ELECTIVE_TUTS, ELECTIVES
 # from schedule import Schedule
 
 core_schedules = deserialize("core_schedules_with_tuts")
+print(len(core_schedules))
 subjects = deserialize("all_subjects")
 
 
@@ -80,6 +81,9 @@ def add_both(schedules, elective_code, tuts1, tuts2):
                         tutorial_name = new_schedule.name
                         new_schedule.name = f"{tutorial_name} Core and Tutorial {tutorial1} in {ELECTIVES[elective_code[0]]} and Tutorial {tutorial2} in {ELECTIVES[elective_code[1]]}"
                         new_schedule.free()
+                        new_schedule.number = tutorial_name
+                        new_schedule.elect1number = tutorial1
+                        new_schedule.elect2number = tutorial2
                         results.append(new_schedule)
     return results
 
@@ -109,5 +113,12 @@ def add_elective(seminars, elective_codes):
 # print(core_schedules)
 to_func = core_schedules.copy()
 seminars = add_seminar(to_func, "CSEN1140")
-final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
-print(final_schedules)
+print(len(seminars))
+print(seminars[0])
+# final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
+# print(len(final_schedules))
+
+person = "OnlyFahim"
+
+elective_1 = ELECTIVES["NETW1009"]
+elective_2 = ELECTIVES["DMET1001"]

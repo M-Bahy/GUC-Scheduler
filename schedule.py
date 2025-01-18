@@ -21,6 +21,9 @@ class Schedule:
         self.df = pd.DataFrame(index=self.index, columns=self.columns)
         self.strict = strict
         self.name = name
+        self.number = 0
+        self.elect1number = 0
+        self.elect2number = 0
 
     def __str__(self):
         return "\n" + "\n" + self.name + "\n" + str(self.df)
@@ -42,7 +45,10 @@ class Schedule:
                 + f" and you are trying to set it to {value}"
             )
             raise ValueError(message)
-        self.df.iloc[day, slot] = value
+        if self.strict:
+            self.df.iloc[day, slot] = value
+        else:
+            self.df.iloc[day, slot] = self.df.iloc[day, slot] + "\n" + value
 
     def save(self, path):
         self.df.to_csv(path)
