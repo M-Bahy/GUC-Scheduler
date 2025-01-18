@@ -1,5 +1,6 @@
 import copy
 from data import deserialize
+import os
 from data import (
     DAY_MAPPING,
     SLOT_MAPPING,
@@ -24,7 +25,10 @@ def add_seminar(cores, seminar_code):
             break
     day = DAY_MAPPING[seminar.day]
     slot = SLOT_MAPPING[seminar.slot]
+    counter = 4
     for core in cores:
+        counter += 1
+        core.number = counter
         core.set_slot(day, slot, seminar.name)
     return cores
 
@@ -99,4 +103,13 @@ print(len(seminars))
 
 person = "OnlyFahim"
 
+# create a folder for the person
+os.makedirs(person, exist_ok=True)
 
+# put the schedules in the folder
+
+for i, schedule in enumerate(seminars):
+    schedule.free()
+    saving_name = f"{person}/Tutorial {schedule.number}.csv"
+    schedule.save(saving_name)
+    # serialize(schedule, f"{person}/schedule{i}")
