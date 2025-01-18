@@ -1,3 +1,4 @@
+import copy
 from data import deserialize
 from data import DAY_MAPPING, SLOT_MAPPING, LECTURE, ELECTIVE_TUTS
 
@@ -45,17 +46,20 @@ def add_elective_lecture(schedules, elective_code):
 def add_both(schedules, elective_code, tuts1, tuts2):
     results = []
     for tutorial1 in tuts1:  # [T005, T006, T007]
-        working = schedules.copy()
+        working = [copy.deepcopy(schedule) for schedule in schedules]
         for subject in subjects:
             if subject.code == elective_code[0] and subject.group == tutorial1:
                 day = DAY_MAPPING[subject.day]
                 slot = SLOT_MAPPING[subject.slot]
                 for schedule in working:
                     # T005 Tutorial DLCV
-                    schedule.set_slot(day, slot, subject.name + " Tutorial")
+                    try:
+                        schedule.set_slot(day, slot, subject.name + " Tutorial")
+                    except ValueError:
+                        continue
                     break
         for tutorial2 in tuts2:
-            working_copy = working.copy()
+            working_copy = [copy.deepcopy(schedule) for schedule in working]
             for subject in subjects:
                 if subject.code == elective_code[1] and subject.group == tutorial2:
                     day = DAY_MAPPING[subject.day]
@@ -95,4 +99,4 @@ def add_elective(seminars, elective_codes):
 to_func = core_schedules.copy()
 seminars = add_seminar(to_func, "CSEN1140")
 final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
-# print(final_schedules)
+print(final_schedules)
