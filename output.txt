@@ -1,87 +1,4 @@
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
-          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
-Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
-Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
-Monday                     NaN                     NaN                   NaN                   NaN                  NaN
-Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
-Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
-Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 5
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -89,6 +6,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 6
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -96,6 +14,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 7
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -103,6 +22,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 8
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -110,6 +30,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 9
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -117,6 +38,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 10
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -124,6 +46,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 11
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -131,6 +54,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 12
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -138,6 +62,7 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 13
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
@@ -145,10 +70,107 @@ Monday                     NaN                     NaN                   NaN    
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 14
           First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
 Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
 Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
 Monday                     NaN                     NaN                   NaN                   NaN                  NaN
 Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
 Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 15
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN       Compilers Lecture                   NaN                   NaN                  NaN
+Wednesday                  NaN                     NaN                   NaN          ITPM Lecture     Security Lecture
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 16
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 17
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 18
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 19
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 20
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 21
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 22
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 23
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 24
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 25
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
+Thursday                   NaN                     NaN                   NaN                   NaN                  NaN
+Tutorial 26
+          First Slot 8:15-9:45 Second Slot 10:00-11:30 Third Slot 11:45-1:15 Fourth Slot 1:45-3:15 Fifth Slot 3:45-5:15
+Saturday                   NaN                     NaN                   NaN                   NaN                  NaN
+Sunday                     NaN                     NaN                   NaN                   NaN                  NaN
+Monday                     NaN                     NaN                   NaN                   NaN                  NaN
+Tuesday                    NaN                     NaN                   NaN     Compilers Lecture                  NaN
+Wednesday                  NaN        Security Lecture          ITPM Lecture                   NaN                  NaN
 Thursday                   NaN                     NaN                   NaN                   NaN                  NaN

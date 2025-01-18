@@ -16,12 +16,12 @@ def serialize(obj, name):
 
 
 subjects = deserialize("all_subjects")
-iteration_counter = 0
-schedules = [None] * 22
+# iteration_counter = 0
+schedules = []
 for number in GS:
-    iteration_counter += 1
-    schedule = Schedule(True)
-    lec_group = "L001" if number > 16 else "L002"
+    # iteration_counter += 1
+    schedule = Schedule(strict=True, name=f"Tutorial {number}")
+    lec_group = "L001" if number < 16 else "L002"
     for subject in subjects:
         if "Seminar" in subject.name or not (subject.isCore):
             continue
@@ -29,7 +29,7 @@ for number in GS:
             day = DAY_MAPPING[subject.day]
             slot = SLOT_MAPPING[subject.slot]
             schedule.set_slot(day, slot, subject.name + " Lecture")
-    schedules[iteration_counter-1] = schedule
+    schedules.append(schedule)
 
 # print all the schedules in a file
 

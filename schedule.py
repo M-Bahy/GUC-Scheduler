@@ -2,7 +2,7 @@ import pandas as pd
 
 
 class Schedule:
-    def __init__(self, strict=False):
+    def __init__(self, strict, name):
         self.columns = [
             "First Slot 8:15-9:45",
             "Second Slot 10:00-11:30",
@@ -20,12 +20,13 @@ class Schedule:
         ]
         self.df = pd.DataFrame(index=self.index, columns=self.columns)
         self.strict = strict
+        self.name = name
 
     def __str__(self):
-        return str(self.df)
+        return self.name + "\n" + str(self.df)
 
     def __repr__(self):
-        return str(self.df)
+        return self.name + "\n" + str(self.df)
 
     def get_size(self):
         return self.df.shape
