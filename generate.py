@@ -1,6 +1,6 @@
 import copy
 from data import deserialize
-from data import DAY_MAPPING, SLOT_MAPPING, LECTURE, ELECTIVE_TUTS
+from data import DAY_MAPPING, SLOT_MAPPING, LECTURE, ELECTIVE_TUTS, ELECTIVES
 
 # from schedule import Schedule
 
@@ -37,7 +37,7 @@ def add_elective_lecture(schedules, elective_code):
             if lec.group == group_code:
                 day = DAY_MAPPING[lec.day]
                 slot = SLOT_MAPPING[lec.slot]
-                try :
+                try:
                     schedule.set_slot(day, slot, lec.name + " Lecture")
                     results.append(schedule)
                 except ValueError:
@@ -62,7 +62,6 @@ def add_both(schedules, elective_code, tuts1, tuts2):
                             schedule
                         )  # Remove the schedule if an error occurs
                         continue
-                    schedule.name += " " + f"Tutorial {tutorial1} in {subject.name}"
         for tutorial2 in tuts2:
             working_copy = [copy.deepcopy(schedule) for schedule in working]
             for subject in subjects:
@@ -77,8 +76,10 @@ def add_both(schedules, elective_code, tuts1, tuts2):
                                 schedule
                             )  # Remove the schedule if an error occurs
                             continue
-                        schedule.name += " " + f"Tutorial {tutorial1} in {subject.name}"
-                        results.append(schedule)
+                        new_schedule = copy.deepcopy(schedule)
+                        tutorial_name = new_schedule.name
+                        new_schedule.name = f"{tutorial_name} Core and Tutorial {tutorial1} in {ELECTIVES[elective_code[0]]} and Tutorial {tutorial2} in {ELECTIVES[elective_code[1]]}"
+                        results.append(new_schedule)
     return results
 
 
