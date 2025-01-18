@@ -101,7 +101,7 @@ print(len(seminars))
 print(len(seminars))
 # print(final_schedules)
 
-person = "OnlyFahim2"
+person = "Bahy"
 
 # create a folder for the person
 os.makedirs(person, exist_ok=True)
