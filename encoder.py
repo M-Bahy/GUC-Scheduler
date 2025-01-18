@@ -10,7 +10,6 @@ INNER_CELL_SPLIT = " "
 LECTURE = "Lecture"
 LAB = "Lab"
 TUTORIAL = "Tut"
-MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
 ELECTIVES = {
     "CSEN907": "KRR",
     "CSEN1076": "NLP",
@@ -43,6 +42,14 @@ SEMINARS = {
     "CSEN1134": "Seminar - Mohamed Karam Gabr",
     "CSEN1135": "Seminar - Mohamed Karam Gabr",
 }
+CORES = {
+    "CSEN1001": "Security",
+    "CSEN1003": "Compilers",
+    "CSEN1002": "Scalable",
+    "HUMA1001": "ITPM",
+}
+
+MAPPING = {**ELECTIVES, **SEMINARS, **CORES}
 
 
 def encode(CSV_PATH):
@@ -70,20 +77,22 @@ def encode(CSV_PATH):
 
                 # replace the code with its mapping if it exists
                 if code in MAPPING:
+                    old_code = code
                     code = MAPPING[code]
                     # put the code back in the subject
                     subject[-3] = code
                     subject.pop(-2)
-                    sub = (
-                        Subject(  # group, location, name, type, code, isCore, day, slot
-                            subject[0],
-                            subject[1],
-                            subject[2],
-                            subject[3],
-                            df.index[i],
-                            df.columns[j],
-                        )
+                    sub = Subject(
+                        group=subject[0],
+                        location=subject[1],
+                        name=subject[2],
+                        type=subject[3],
+                        code=old_code,
+                        isCore=old_code in CORES,
+                        day=df.index[i],
+                        slot=df.columns[j],
                     )
+
                     subjects.append(sub)
                     subject = " ".join(subject)
                     new_content.append(subject)

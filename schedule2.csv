@@ -1,7 +1,48 @@
 ,First Slot 8:15-9:45,Second Slot 10:00-11:30,Third Slot 11:45-1:15,Fourth Slot 1:45-3:15,Fifth Slot 3:45-5:15
 Saturday,free,free,free,free,free
-Sunday,free,free,free,T016 C3.306 Cloud Computing Tut,free
-Monday,free,free,free,free,free
-Tuesday,free,free,free,free,free
-Wednesday,free,free,free,free,free
-Thursday,free,L002 H16 Cloud Computing Lecture,free,free,free
+Sunday,free,T017 B4.211 ITPM Tut,free,"P020 D3.306 Scalable Lab
+P021 C7.203 Scalable Lab
+P022 C7.217 Scalable Lab
+T024 D4.106 Security Tut
+T017 D4.108 Security Tut
+T016 D4.110 Compilers Tut
+T016 C3.306 Cloud Computing Tut","P020 D3.306 Scalable Lab
+P021 C7.203 Scalable Lab
+P022 C7.217 Scalable Lab
+T016 D4.101 Security Tut
+T019 D4.105 Security Tut
+T017 D4.106 Compilers Tut
+T024 D4.108 Compilers Tut"
+Monday,"P023 C7.203 Scalable Lab
+T026 D4.105 Security Tut","P023 C7.203 Scalable Lab
+T026 D4.105 Compilers Tut",T022 D4.101 Compilers Tut,T022 D4.101 Security Tut,free
+Tuesday,"P016 C7.201 Scalable Lab
+T019 B4.211 ITPM Tut
+T020 B4.212 ITPM Tut","P016 C7.201 Scalable Lab
+T019 C5.101 Compilers Tut
+T018 D4.101 Security Tut
+T022 B4.211 ITPM Tut
+T021 D4.105 Security Tut
+T023 D4.106 Security Tut",free,L002 H13 Compilers Lecture,T024 B4.213 ITPM Tut
+Wednesday,free,L002 H4 Security Lecture,L002 H19 ITPM Lecture,"P017 C7.217 Scalable Lab
+P018 C7.201 Scalable Lab
+P019 C7.203 Scalable Lab
+T020 D4.101 Security Tut
+T021 C5.101 Compilers Tut
+T023 C5.102 Compilers Tut
+T025 B4.211 ITPM Tut","P017 C7.217 Scalable Lab
+P018 C7.201 Scalable Lab
+P019 C7.203 Scalable Lab
+T020 D4.101 Compilers Tut
+T021 B4.211 ITPM Tut
+T023 B4.212 ITPM Tut
+T025 C5.101 Compilers Tut"
+Thursday,"P025 C6.209 Scalable Lab
+P026 C7.201 Scalable Lab","P025 C6.209 Scalable Lab
+P026 C7.201 Scalable Lab
+L002 H16 Cloud Computing Lecture",free,"P024 C7.217 Scalable Lab
+T025 D4.105 Security Tut
+T018 B4.211 ITPM Tut
+T026 B4.212 ITPM Tut","P024 C7.217 Scalable Lab
+T018 C5.101 Compilers Tut
+T016 B4.212 ITPM Tut"
