@@ -23,10 +23,10 @@ class Schedule:
         self.name = name
 
     def __str__(self):
-        return self.name + "\n" + str(self.df)
+        return "\n" + "\n" + self.name + "\n" + str(self.df)
 
     def __repr__(self):
-        return self.name + "\n" + str(self.df)
+        return "\n" + "\n" + self.name + "\n" + str(self.df)
 
     def get_size(self):
         return self.df.shape

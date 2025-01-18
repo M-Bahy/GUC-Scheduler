@@ -1,3 +1,5 @@
+import pickle
+
 G1_PATH = "CSVs/g1 og.csv"
 G2_PATH = "CSVs/g2 og.csv"
 BETWEEN_CELLS_SPLIT = "      "
@@ -162,3 +164,15 @@ ELECTIVE_TUTS = {
     "DMET1075": [],
     "MCTR1024": ["T003"],
 }
+
+
+def deserialize(name):
+    name = f"pickles/{name}.pickle"
+    with open(name, "rb") as infile:
+        return pickle.load(infile)
+
+
+def serialize(obj, name):
+    name = f"pickles/{name}.pickle"
+    with open(name, "wb") as outfile:
+        pickle.dump(obj, outfile)
