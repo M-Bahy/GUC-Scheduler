@@ -18,4 +18,4 @@ def combine_pdfs(folder_name, output_filename):
     pdf_merger.close()
 
 # Example usage:
-combine_pdfs('OnlyFahim2', 'OnlyFahim.pdf')
+combine_pdfs('Bahy', 'Bahy.pdf')

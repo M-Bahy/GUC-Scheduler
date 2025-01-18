@@ -94,7 +94,7 @@ def add_elective(seminars, elective_codes):
 
 # print(core_schedules)
 to_func = core_schedules.copy()
-seminars = add_seminar(to_func, "CSEN1140")
+seminars = add_seminar(to_func, "CSEN1008")
 print(len(seminars))
 # print(seminars[0])
 # final_schedules = add_elective(seminars, ["NETW1009", "DMET1001"])
