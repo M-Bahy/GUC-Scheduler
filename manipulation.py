@@ -41,8 +41,12 @@ for i in range(0, len(df.index)):  # loop through rows
                 subject = " ".join(subject)
                 new_content.append(subject)
 
-        # Join subjects with a line break
-        output_df.iloc[i, j] = "\n".join(new_content)
+        # If no subjects were added, mark as "free"
+        if not new_content:
+            output_df.iloc[i, j] = "free"
+        else:
+            # Join subjects with a line break
+            output_df.iloc[i, j] = "\n".join(new_content)
 
 # Save the output DataFrame to a CSV file
 output_df.to_csv(OUTPUT_PATH)
