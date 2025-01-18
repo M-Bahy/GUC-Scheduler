@@ -9,3 +9,4 @@ def deserialize(name):
 
 subjects = deserialize("all_subjects")
 print(len(subjects))
+print(subjects[0].type)
