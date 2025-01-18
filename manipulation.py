@@ -1,6 +1,6 @@
 import pandas as pd
 
-OG_PATH = "og.csv"
+CSV_PATH = "g1 og.csv"
 OUTPUT_PATH = "output2.csv"
 BETWEEN_CELLS_SPLIT = "      "
 INNER_CELL_SPLIT = " "
@@ -9,7 +9,7 @@ LAB = "Lab"
 TUTORIAL = "Tut"
 MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
 
-df = pd.read_csv(OG_PATH, index_col=0)
+df = pd.read_csv(CSV_PATH, index_col=0)
 output_df = pd.DataFrame(index=df.index, columns=df.columns)
 
 for i in range(0, len(df.index)):  # loop through rows
