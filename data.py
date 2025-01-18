@@ -176,3 +176,17 @@ def serialize(obj, name):
     name = f"pickles/{name}.pickle"
     with open(name, "wb") as outfile:
         pickle.dump(obj, outfile)
+
+
+ELECTIVE_GROUPS = {
+    "CSEN907": ["L001"],  # KRR
+    "CSEN1076": ["L001"],  # NLP
+    "DMET1067": ["L001"],  # Deep Learning
+    "ELCT1018": ["L001"],  # Quantum
+    "NETW1009": ["L001", "L002"],  # Cloud Computing
+    "DMET1072": ["L001"],  # Computer Animation
+    "DMET1001": ["L001", "L002"],  # Image Processing
+    "DMET1042": ["L001"],  # VOIP
+    "DMET1075": ["L001"],  # AR/VR
+    "MCTR1024": ["L001"],  # Reinforcement Learning
+}
