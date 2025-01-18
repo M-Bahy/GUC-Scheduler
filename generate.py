@@ -51,24 +51,30 @@ def add_both(schedules, elective_code, tuts1, tuts2):
             if subject.code == elective_code[0] and subject.group == tutorial1:
                 day = DAY_MAPPING[subject.day]
                 slot = SLOT_MAPPING[subject.slot]
-                for schedule in working:
-                    # T005 Tutorial DLCV
+                for schedule in working[:]:  # Iterate over a copy of the list
                     try:
                         schedule.set_slot(day, slot, subject.name + " Tutorial")
                     except ValueError:
+                        working.remove(
+                            schedule
+                        )  # Remove the schedule if an error occurs
                         continue
-                    break
+                    schedule.name += " " + f"Tutorial {tutorial1} in {subject.name}"
         for tutorial2 in tuts2:
             working_copy = [copy.deepcopy(schedule) for schedule in working]
             for subject in subjects:
                 if subject.code == elective_code[1] and subject.group == tutorial2:
                     day = DAY_MAPPING[subject.day]
                     slot = SLOT_MAPPING[subject.slot]
-                    for schedule in working_copy:
+                    for schedule in working_copy[:]:  # Iterate over a copy of the list
                         try:
                             schedule.set_slot(day, slot, subject.name + " Tutorial")
                         except ValueError:
+                            working_copy.remove(
+                                schedule
+                            )  # Remove the schedule if an error occurs
                             continue
+                        schedule.name += " " + f"Tutorial {tutorial1} in {subject.name}"
                         results.append(schedule)
     return results
 
