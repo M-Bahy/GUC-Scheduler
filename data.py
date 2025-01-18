@@ -1,5 +1,5 @@
-G1_PATH = "g1 og.csv"
-G2_PATH = "g2 og.csv"
+G1_PATH = "CSVs/g1 og.csv"
+G2_PATH = "CSVs/g2 og.csv"
 BETWEEN_CELLS_SPLIT = "      "
 INNER_CELL_SPLIT = " "
 LECTURE = "Lecture"
