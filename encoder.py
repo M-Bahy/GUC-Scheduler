@@ -11,6 +11,18 @@ LECTURE = "Lecture"
 LAB = "Lab"
 TUTORIAL = "Tut"
 MAPPING = {"DMET1001": "Image Processing", "NETW1009": "Cloud Computing"}
+ELECTIVES = {
+    "CSEN907": "KRR",
+    "CSEN1076": "NLP",
+    "DMET1067": "Deep Learning",
+    "ELCT1018": "Quantum",
+    "NETW1009": "Cloud Computing",
+    "DMET1072": "Computer Animation",
+    "DMET1001": "Image Processing",
+    "DMET1042": "VOIP",
+    "DMET1075": "AR/VR",
+    "MCTR1024": "Reinforcement Learning",
+}
 
 
 def encode(CSV_PATH):
@@ -42,13 +54,15 @@ def encode(CSV_PATH):
                     # put the code back in the subject
                     subject[-3] = code
                     subject.pop(-2)
-                    sub = Subject(  # group, location, name, type, day, slot
-                        subject[0],
-                        subject[1],
-                        subject[2],
-                        subject[3],
-                        df.index[i],
-                        df.columns[j],
+                    sub = (
+                        Subject(  # group, location, name, type, code, isCore, day, slot
+                            subject[0],
+                            subject[1],
+                            subject[2],
+                            subject[3],
+                            df.index[i],
+                            df.columns[j],
+                        )
                     )
                     subjects.append(sub)
                     subject = " ".join(subject)
@@ -69,4 +83,3 @@ subjects_of_group_2, schedule_of_group_2 = encode(G2_PATH)
 schedule_of_group_1.save("schedule1.csv")
 schedule_of_group_2.save("schedule2.csv")
 print(subjects_of_group_1[0].group)
-
