@@ -25,10 +25,15 @@ for number in GS:
     for subject in subjects:
         if not (subject.isCore):
             continue
+        day = DAY_MAPPING[subject.day]
+        slot = SLOT_MAPPING[subject.slot]
         if subject.type == LECTURE and subject.group == lec_group:
-            day = DAY_MAPPING[subject.day]
-            slot = SLOT_MAPPING[subject.slot]
             schedule.set_slot(day, slot, subject.name + " Lecture")
+        else:
+            tut_number = int(subject.group[1:])
+            if tut_number == number:
+                schedule.set_slot(day, slot, subject.name + " Tutorial")
+
     schedules.append(schedule)
 
 # print all the schedules in a file
@@ -37,4 +42,4 @@ with open("output.txt", "w") as file:
     for schedule in schedules:
         file.write(str(schedule) + "\n")
 
-serialize(schedules, "core_schedules")
+serialize(schedules, "core_schedules_with_tuts")
