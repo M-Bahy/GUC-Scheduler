@@ -10,7 +10,7 @@ def deserialize(name):
 
 
 def serialize(obj, name):
-    name = name + ".pickle"
+    name = f"pickles/{name}.pickle"
     with open(name, "wb") as outfile:
         pickle.dump(obj, outfile)
 
@@ -36,3 +36,5 @@ for number in GS:
 with open("output.txt", "w") as file:
     for schedule in schedules:
         file.write(str(schedule) + "\n")
+
+serialize(schedules, "core_schedules")
