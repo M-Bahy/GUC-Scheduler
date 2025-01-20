@@ -17,13 +17,14 @@ def add_tuts(tut1, tut2, group1="L001", group2="L001"):
     tutorial1 = get_subject(elect1_code, tut1)
     tutorial2 = get_subject(elect2_code, tut2)
 
-    # Try to add the first lecture, remove schedules with conflicts
+    # Try to add the first tutorial, remove schedules with conflicts
     valid_schedules = []
     for schedule in schedules:
         day = DAY_MAPPING[tutorial1.day]
         slot = SLOT_MAPPING[tutorial1.slot]
         try:
-            schedule.set_slot(day, slot, tutorial1.name)
+            name = tutorial1.name + " " + tutorial1.type
+            schedule.set_slot(day, slot, name)
             valid_schedules.append(schedule)
         except ValueError:
             continue
@@ -34,7 +35,8 @@ def add_tuts(tut1, tut2, group1="L001", group2="L001"):
         day = DAY_MAPPING[tutorial2.day]
         slot = SLOT_MAPPING[tutorial2.slot]
         try:
-            schedule.set_slot(day, slot, tutorial2.name)
+            name = tutorial2.name + " " + tutorial2.type
+            schedule.set_slot(day, slot, name)
             final_schedules.append(schedule)
         except ValueError:
             continue
@@ -72,8 +74,50 @@ for t1 in elect1_tuts:
     for t2 in elect2_tuts:
         possible_combinations.append([t1, t2])
 
-# 2. For each combination, check if it is valid
-valid_combinations = []
+# 2&3. For each combination, check if it is valid
+final_combinations = {}
+# L001 + L001
 for combination in possible_combinations:
     t1 = combination[0]
     t2 = combination[1]
+    group1 = "L001"
+    group2 = "L001"
+    combination_name = f"{elect1_code}_{group1}_{t1}_{elect2_code}_{group2}_{t2}"
+    combination = add_tuts(tut1=t1, tut2=t2, group1=group1, group2=group2)
+    final_combinations[combination_name] = combination
+# L001 + L002
+for combination in possible_combinations:
+    t1 = combination[0]
+    t2 = combination[1]
+    group1 = "L001"
+    group2 = "L002"
+    combination_name = f"{elect1_code}_{group1}_{t1}_{elect2_code}_{group2}_{t2}"
+    combination = add_tuts(tut1=t1, tut2=t2, group1=group1, group2=group2)
+    final_combinations[combination_name] = combination
+
+# L002 + L001
+for combination in possible_combinations:
+    t1 = combination[0]
+    t2 = combination[1]
+    group1 = "L002"
+    group2 = "L001"
+    combination_name = f"{elect1_code}_{group1}_{t1}_{elect2_code}_{group2}_{t2}"
+    combination = add_tuts(tut1=t1, tut2=t2, group1=group1, group2=group2)
+    final_combinations[combination_name] = combination
+
+# L002 + L002
+for combination in possible_combinations:
+    t1 = combination[0]
+    t2 = combination[1]
+    group1 = "L002"
+    group2 = "L002"
+    combination_name = f"{elect1_code}_{group1}_{t1}_{elect2_code}_{group2}_{t2}"
+    combination = add_tuts(tut1=t1, tut2=t2, group1=group1, group2=group2)
+    final_combinations[combination_name] = combination
+
+for combination_name, combination in final_combinations.items():
+    serialize(
+        combination,
+        f"Seminars with elective lectures/{elect1_code}_{elect2_code}/{elect1_code}_{group1}_{elect2_code}_{group2}/Tutorials/{combination_name}",
+    )
+    print(f"Saved {combination_name}")
