@@ -27,9 +27,11 @@ def read_data(directory):
 def create_pdfs(dic):
     for key in dic:
         schedules = dic[key]
-        os.makedirs(f"PDFs/{key}", exist_ok=True)
+        path = f"others/Fahim og PDFs/{key}"
+        os.makedirs(path, exist_ok=True)
         for schedule in schedules:
-            schedule.save_as_pdf(f"PDFs/{key}/{schedule.name}.pdf")
+            schedule.free()
+            schedule.save_as_pdf(f"{path}/{schedule.name}.pdf")
 
 
 dic, lis = read_data("others/Fahim og files/")
