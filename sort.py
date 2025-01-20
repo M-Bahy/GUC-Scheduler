@@ -1,25 +1,43 @@
 import os
+import shutil
+import re
 
-def sort_pdfs(directory, n):
-    # Check if the directory exists
-    if not os.path.exists(directory):
-        print(f"Directory '{directory}' does not exist.")
-        return
+
+def distribute_pdfs(directory):
+    # Define the subfolder names and their corresponding regex patterns
+    subfolders = {
+        "NETW1009_L001_DMET1001_L001": re.compile(
+            r"^NETW1009_L001_.*_DMET1001_L001_.*\.pdf$"
+        ),
+        "NETW1009_L001_DMET1001_L002": re.compile(
+            r"^NETW1009_L001_.*_DMET1001_L002_.*\.pdf$"
+        ),
+        "NETW1009_L002_DMET1001_L001": re.compile(
+            r"^NETW1009_L002_.*_DMET1001_L001_.*\.pdf$"
+        ),
+        "NETW1009_L002_DMET1001_L002": re.compile(
+            r"^NETW1009_L002_.*_DMET1001_L002_.*\.pdf$"
+        ),
+    }
+
+    # Create the subfolders if they do not exist
+    for subfolder in subfolders.keys():
+        subfolder_path = os.path.join(directory, subfolder)
+        os.makedirs(subfolder_path, exist_ok=True)
 
     # Get a list of all PDF files in the directory
     pdf_files = [f for f in os.listdir(directory) if f.endswith(".pdf")]
 
-    # Check if any PDF files were found
-    if not pdf_files:
-        print(f"No PDF files found in directory '{directory}'.")
-        return
+    # Distribute the PDFs into the appropriate subfolders
+    for pdf in pdf_files:
+        for subfolder, pattern in subfolders.items():
+            if pattern.match(pdf):
+                src_path = os.path.join(directory, pdf)
+                dest_path = os.path.join(directory, subfolder, pdf)
+                shutil.move(src_path, dest_path)
+                break
 
-    # Sort the PDF files by name
-    sorted_pdfs = sorted(pdf_files)
-
-    # Print the names of the first n items, each on a separate line
-    for pdf in sorted_pdfs[:n]:
-        print(pdf)
 
 # Example usage:
-sort_pdfs("others/Fahim og PDFs", 13)
+distribute_pdfs("others/Fahim og PDFs")
+print("Done")
