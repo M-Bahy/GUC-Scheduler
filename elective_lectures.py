@@ -78,3 +78,5 @@ serialize(
 serialize(
     c4, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002"
 )
+
+print("Done")
