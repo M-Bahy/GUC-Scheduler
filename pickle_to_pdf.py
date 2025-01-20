@@ -18,7 +18,7 @@ def read_data(directory):
     for file in os.listdir(directory):
         if file.endswith(".pickle"):
             schedule = deserialize(directory + file)
-            file.replace(".pickle", "")
+            file = file.replace(".pickle", "")
             schedules_dic[file] = schedule
             schedules_list.append(schedule)
     return schedules_dic, schedules_list
@@ -33,4 +33,5 @@ def create_pdfs(dic):
 
 
 dic, lis = read_data("others/Fahim og files/")
+
 create_pdfs(dic)
