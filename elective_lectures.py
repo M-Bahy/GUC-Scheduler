@@ -13,24 +13,29 @@ code = "CSEN1140"
 def add_elective_lecture(seminar_code, lecture1, lecture2):
     seminar_schedules = deserialize(f"Seminars/{seminar_code}")
 
-    # Add the first lecture to all schedules
+    # Try to add the first lecture, remove schedules with conflicts
+    valid_schedules = []
     for schedule in seminar_schedules:
         day = DAY_MAPPING[lecture1.day]
         slot = SLOT_MAPPING[lecture1.slot]
-        schedule.set_slot(day, slot, lecture1.name)
-
-    # Try to add the second lecture, remove schedules with conflicts
-    valid_schedules = []
-    for schedule in seminar_schedules:
-        day = DAY_MAPPING[lecture2.day]
-        slot = SLOT_MAPPING[lecture2.slot]
         try:
-            schedule.set_slot(day, slot, lecture2.name)
+            schedule.set_slot(day, slot, lecture1.name)
             valid_schedules.append(schedule)
         except ValueError:
             continue
 
-    return valid_schedules
+    # Try to add the second lecture, remove schedules with conflicts
+    final_schedules = []
+    for schedule in valid_schedules:
+        day = DAY_MAPPING[lecture2.day]
+        slot = SLOT_MAPPING[lecture2.slot]
+        try:
+            schedule.set_slot(day, slot, lecture2.name)
+            final_schedules.append(schedule)
+        except ValueError:
+            continue
+
+    return final_schedules
 
 
 # possible combinations
