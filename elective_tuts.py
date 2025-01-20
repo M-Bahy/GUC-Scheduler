@@ -12,7 +12,7 @@ elect2_tuts = ELECTIVE_TUTS[elect2_code]  # 1-14
 
 def add_tuts(tut1, tut2, group1="L001", group2="L001"):
     schedules = deserialize(
-        f"Seminars with elective lectures/{elect1_code}_{elect2_code}/{elect1_code}_{group1}_{elect2_code}_{group2}"
+        f"Seminars with elective lectures/{elect1_code}_{elect2_code}/{elect1_code}_{group1}_{elect2_code}_{group2}/{elect1_code}_{group1}_{elect2_code}_{group2}"
     )
     tutorial1 = get_subject(elect1_code, tut1)
     tutorial2 = get_subject(elect2_code, tut2)
