@@ -113,7 +113,8 @@ for combination in possible_combinations:
     group2 = "L002"
     combination_name = f"{elect1_code}_{group1}_{t1}_{elect2_code}_{group2}_{t2}"
     combination = add_tuts(tut1=t1, tut2=t2, group1=group1, group2=group2)
-    final_combinations[combination_name] = combination
+    if combination:
+        final_combinations[combination_name] = combination
 
 for combination_name, combination in final_combinations.items():
     serialize(
