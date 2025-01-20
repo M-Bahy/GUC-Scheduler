@@ -14,6 +14,10 @@ def add_seminar(seminar_code):
         if subject.code == seminar_code:
             seminar = subject
             break
+    if seminar is None:
+        print(f"Seminar {seminar_code} not found")
+        print("Skipping...")
+        return
     day = DAY_MAPPING[seminar.day]
     slot = SLOT_MAPPING[seminar.slot]
     counter = 4
@@ -26,4 +30,6 @@ def add_seminar(seminar_code):
 
 for seminar_code in SEMINARS.keys():
     seminar = add_seminar(seminar_code)
-    serialize(seminar, f"Seminars/{seminar_code}")
+    if seminar :
+        serialize(seminar, f"Seminars/{seminar_code}")
+        print(f"Added {seminar_code}")
