@@ -19,7 +19,8 @@ def add_elective_lecture(seminar_code, lecture1, lecture2):
         day = DAY_MAPPING[lecture1.day]
         slot = SLOT_MAPPING[lecture1.slot]
         try:
-            schedule.set_slot(day, slot, lecture1.name)
+            name = lecture1.name + " " + lecture1.type
+            schedule.set_slot(day, slot, name)
             valid_schedules.append(schedule)
         except ValueError:
             continue
@@ -30,7 +31,8 @@ def add_elective_lecture(seminar_code, lecture1, lecture2):
         day = DAY_MAPPING[lecture2.day]
         slot = SLOT_MAPPING[lecture2.slot]
         try:
-            schedule.set_slot(day, slot, lecture2.name)
+            name = lecture2.name + " " + lecture2.type
+            schedule.set_slot(day, slot, name)
             final_schedules.append(schedule)
         except ValueError:
             continue
@@ -67,16 +69,20 @@ os.makedirs(
 )
 
 serialize(
-    c1, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L001/NETW1009_L001_DMET1001_L001"
+    c1,
+    f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L001/NETW1009_L001_DMET1001_L001",
 )
 serialize(
-    c2, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002/NETW1009_L001_DMET1001_L002"
+    c2,
+    f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002/NETW1009_L001_DMET1001_L002",
 )
 serialize(
-    c3, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L001/NETW1009_L002_DMET1001_L001"
+    c3,
+    f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L001/NETW1009_L002_DMET1001_L001",
 )
 serialize(
-    c4, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002/NETW1009_L002_DMET1001_L002"
+    c4,
+    f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002/NETW1009_L002_DMET1001_L002",
 )
 
 print("Done")
