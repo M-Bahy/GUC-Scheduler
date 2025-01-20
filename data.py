@@ -190,3 +190,11 @@ ELECTIVE_GROUPS = {
     "DMET1075": ["L001"],  # AR/VR
     "MCTR1024": ["L001"],  # Reinforcement Learning
 }
+
+
+def get_subject(code, group="L001"):
+    subjects = deserialize("all_subjects")
+    for subject in subjects:
+        if subject.code == code and subject.group == group:
+            return subject
+    return None
