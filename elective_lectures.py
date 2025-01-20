@@ -67,16 +67,16 @@ os.makedirs(
 )
 
 serialize(
-    c1, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L001"
+    c1, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L001/NETW1009_L001_DMET1001_L001"
 )
 serialize(
-    c2, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002"
+    c2, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002/NETW1009_L001_DMET1001_L002"
 )
 serialize(
-    c3, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L001"
+    c3, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L001/NETW1009_L002_DMET1001_L001"
 )
 serialize(
-    c4, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002"
+    c4, f"Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002/NETW1009_L002_DMET1001_L002"
 )
 
 print("Done")
