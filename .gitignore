@@ -174,5 +174,4 @@ cython_debug/
 
 try.xlsm
 
-OnlyFahim*
-Bahy*
+others/*
