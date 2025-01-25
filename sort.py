@@ -6,17 +6,11 @@ import re
 def distribute_pdfs(directory):
     # Define the subfolder names and their corresponding regex patterns
     subfolders = {
-        "NETW1009_L001_DMET1001_L001": re.compile(
-            r"^NETW1009_L001_.*_DMET1001_L001_.*\.pdf$"
+        "NETW1009_L001_DMET1067_L001": re.compile(
+            r"^NETW1009_L001_.*_DMET1067_L001_.*\.pdf$"
         ),
-        "NETW1009_L001_DMET1001_L002": re.compile(
-            r"^NETW1009_L001_.*_DMET1001_L002_.*\.pdf$"
-        ),
-        "NETW1009_L002_DMET1001_L001": re.compile(
-            r"^NETW1009_L002_.*_DMET1001_L001_.*\.pdf$"
-        ),
-        "NETW1009_L002_DMET1001_L002": re.compile(
-            r"^NETW1009_L002_.*_DMET1001_L002_.*\.pdf$"
+        "NETW1009_L002_DMET1067_L001": re.compile(
+            r"^NETW1009_L002_.*_DMET1067_L001_.*\.pdf$"
         ),
     }
 

@@ -27,5 +27,5 @@ def combine_pdfs(folder_path):
 
 
 # Example usage:
-combine_pdfs("others/Fahim og PDFs")
+combine_pdfs("others/Bahy og PDFs")
 print("Done")
