@@ -4,7 +4,7 @@ import os
 from data import DAY_MAPPING, SLOT_MAPPING, SEMINARS, ELECTIVE_TUTS
 
 elect1_code = "NETW1009"  # Cloud Computing
-elect2_code = "DMET1001"  # Image Processing
+elect2_code = "DMET1067"  # Deep Learning
 
 elect1_tuts = ELECTIVE_TUTS[elect1_code]  # 1-16
 elect2_tuts = ELECTIVE_TUTS[elect2_code]  # 1-14
