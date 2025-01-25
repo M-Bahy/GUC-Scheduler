@@ -46,10 +46,11 @@ class Schedule:
                 + f" and you are trying to set it to {value}"
             )
             raise ValueError(message)
-        if self.strict:
+        if self.strict or pd.isna(self.df.iloc[day, slot]):
             self.df.iloc[day, slot] = value
         else:
-            self.df.iloc[day, slot] = self.df.iloc[day, slot] + "\n" + value
+            # "" + self.df.iloc[day, slot] + "\n" + value
+            self.df.iloc[day, slot] = f"{self.df.iloc[day, slot]}\n{value}"
 
     def save(self, path):
         self.df.to_csv(path)
@@ -62,27 +63,27 @@ class Schedule:
                     self.df.iloc[i, j] = "free"
 
     def save_as_pdf(self, path):
-        pdf = FPDF(orientation='L', unit='mm', format='A4')
+        pdf = FPDF(orientation="L", unit="mm", format="A4")
         pdf.add_page()
         pdf.set_font("Arial", size=8)
-    
+
         # Add the schedule name
         pdf.cell(0, 10, txt=self.name, ln=True, align="C")
-    
+
         # Add the table header
         cell_width = 40  # Adjust the cell width as needed
         pdf.cell(cell_width, 10, txt="", border=1)
         for column in self.columns:
             pdf.cell(cell_width, 10, txt=column, border=1)
         pdf.ln()
-    
+
         # Add the table rows
         for index, row in self.df.iterrows():
             pdf.cell(cell_width, 10, txt=index, border=1)
             for item in row:
                 pdf.cell(cell_width, 10, txt=str(item), border=1)
             pdf.ln()
-    
+
         pdf.output(path)
 
 
