@@ -58,18 +58,18 @@ os.makedirs(
     f"pickles/Seminars with elective lectures/{elect1_code}_{elect2_code}/{elect1_code}_L001_{elect2_code}_L001",
     exist_ok=True,
 )
-os.makedirs(
-    # f"pickles/Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002",
-    exist_ok=True,
-)
+# os.makedirs(
+#     f"pickles/Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L001_DMET1001_L002",
+#     exist_ok=True,
+# )
 os.makedirs(
     f"pickles/Seminars with elective lectures/{elect1_code}_{elect2_code}/{elect1_code}_L002_{elect2_code}_L001",
     exist_ok=True,
 )
-os.makedirs(
-    # f"pickles/Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002",
-    exist_ok=True,
-)
+# os.makedirs(
+#     f"pickles/Seminars with elective lectures/NETW1009_DMET1001/NETW1009_L002_DMET1001_L002",
+#     exist_ok=True,
+# )
 
 serialize(
     c1,
