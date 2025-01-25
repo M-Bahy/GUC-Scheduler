@@ -1,4 +1,5 @@
 import pickle
+from schedule import Schedule
 
 G1_PATH = "CSVs/g1 og.csv"
 G2_PATH = "CSVs/g2 og.csv"
@@ -198,3 +199,15 @@ def get_subject(code, group="L001"):
         if subject.code == code and subject.group == group:
             return subject
     return None
+
+
+def get_lectures(elect1, elect2):
+    sh = Schedule(strict=False, name="Lecture Week")
+    subjects = deserialize("all_subjects")
+    for subject in subjects:
+        if subject.type == LECTURE:
+            if subject.code == elect1 or subject.code == elect2 or subject.isCore:
+                sh.set_slot(
+                    DAY_MAPPING[subject.day], SLOT_MAPPING[subject.slot], subject.name
+                )
+    return sh
