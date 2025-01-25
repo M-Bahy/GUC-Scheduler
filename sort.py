@@ -39,5 +39,5 @@ def distribute_pdfs(directory):
 
 
 # Example usage:
-distribute_pdfs("others/Fahim og PDFs")
+distribute_pdfs("others/Bahy og PDFs")
 print("Done")
